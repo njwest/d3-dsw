@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assessing Social Work Competency Using the Case Study</title>
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <style media="screen">
+        html {
+            font-family: sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        div.bar{
+          display: inline-block;
+          width: 20px;
+          height: 75px;   /* We'll override this later */
+          background-color: teal;
+          margin-right: 2px;
+          margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+  
+    <div class="container">
+        <div id="root"></div>
+    </div>
+
+    <script type="text/javascript">
+
+        var dataset = [5, 10, 15, 20, 25];
+
+        d3.select("#root").selectAll("div").data(dataset).enter().append("div").attr("class", "bar").style("height", function(d){
+          var barHeight = d * 5;
+          return barHeight + "px";
+        });
+
+        // Old tutorial code d3.select("#root").selectAll("p").data(dataset).enter().append("p").text(function(d) {return d; }).style("color", function(d) {
+        // if (d > 15) {   //Threshold of 15
+        //     return "red";
+        // } else {
+        //     return "black";
+        // }
+        // }).attr("class", "bar");
+        // d3.select("#root").append("p").text("New paragraph!");
+        //
+        // var root = d3.select("#root");
+        // var p = root.append("p");
+        // p.text("OMG");
+    </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Assessing Social Work Competency Using the Case Study</title>
     <script type="text/javascript" src="d3/d3.js"></script>
-    <style media="screen">
+    <style>
         html {
             font-family: sans-serif;
             -webkit-text-size-adjust: 100%;
@@ -61,19 +61,33 @@
 </head>
 
 <body>
-  
+
     <div class="container">
-        <div id="root"></div>
+        <div id="root">
+        </div>
+
+        <svg width="500" height="50">
+          <rect x="0" y="0" width="500" height="50"/>
+        </svg>
+        <svg width="500" height="50">
+          <circle cx="250" cy="25" r="25"/>
+        </svg>
+        <svg width="500" height="50">
+          <ellipse cx="250" cy="25" rx="100" ry="25"/>
     </div>
 
     <script type="text/javascript">
 
-        var dataset = [5, 10, 15, 20, 25];
+    var dataset = [];                        //Initialize empty array
+    for (var i = 0; i < 25; i++) {           //Loop 25 times
+        var newNumber = Math.random() * 30;  //New random number (0-30)
+        dataset.push(newNumber);             //Add new number to array
+    }
 
-        d3.select("#root").selectAll("div").data(dataset).enter().append("div").attr("class", "bar").style("height", function(d){
-          var barHeight = d * 5;
-          return barHeight + "px";
-        });
+    d3.select("#root").selectAll("div").data(dataset).enter().append("div").attr("class", "bar").style("height", function(d){
+      var barHeight = d * 5;
+      return barHeight + "px";
+    });
 
         // Old tutorial code d3.select("#root").selectAll("p").data(dataset).enter().append("p").text(function(d) {return d; }).style("color", function(d) {
         // if (d > 15) {   //Threshold of 15

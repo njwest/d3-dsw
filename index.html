@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Assessing Social Work Competency Using the Case Study</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
     <style>
         html {
             font-family: sans-serif;
@@ -48,21 +48,22 @@
             margin-left: auto;
         }
 
-        div.bar{
-          display: inline-block;
-          width: 20px;
-          height: 75px;   /* We'll override this later */
-          background-color: teal;
-          margin-right: 2px;
-          margin-top: 10px;
+        div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;
+            /* We'll override this later */
+            background-color: teal;
+            margin-right: 2px;
+            margin-top: 10px;
         }
 
-      svg .pumpkin {
-          fill: yellow;
-          stroke: orange;
-          stroke-width: 5;
-          opacity: 0.5;
-       }
+        svg .pumpkin {
+            fill: yellow;
+            stroke: orange;
+            stroke-width: 5;
+            opacity: 0.5;
+        }
     </style>
 </head>
 
@@ -75,26 +76,29 @@
         <svg width="500" height="50">
           <rect x="0" y="0" width="500" height="50"/>
         </svg>
-        <svg width="500" height="50">
-          <circle cx="250" cy="25" r="25"/>
-        </svg>
-        <svg width="500" height="50">
-          <ellipse cx="250" cy="25" rx="100" ry="25"/>
-        </svg>
-        <svg width="500" height="50">
-          <line x1="0" y1="0" x2="500" y2="50" stroke="red"/>
-        </svg>
-        <svg width="500" height="50">
-          <text x="250" y="25">Whoaa</text>
-        </svg>
-        <svg width="500" height="50">
-          <text x="250" y="25" font-family="sans-serif" font-size="25" fill="gray">Whoa</text>
-        </svg>
-        <svg width="500" height="50">
-          <circle cx="25" cy="25" r="22" class="pumpkin"/>
 
-        </svg>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          modal 
+        </button>
 
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">category</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
@@ -102,17 +106,20 @@
     <script type="text/javascript" src="d3/d3.js"></script>
 
     <script type="text/javascript">
+        var dataset = []; //Initialize empty array
+        for (var i = 0; i < 25; i++) { //Loop 25 times
+            var newNumber = Math.random() * 30; //New random number (0-30)
+            dataset.push(newNumber); //Add new number to array
+        }
 
-    var dataset = [];                        //Initialize empty array
-    for (var i = 0; i < 25; i++) {           //Loop 25 times
-        var newNumber = Math.random() * 30;  //New random number (0-30)
-        dataset.push(newNumber);             //Add new number to array
-    }
+        d3.select("#root").selectAll("div").data(dataset).enter().append("div").attr("class", "bar").style("height", function(d) {
+            var barHeight = d * 5;
+            return barHeight + "px";
+        });
 
-    d3.select("#root").selectAll("div").data(dataset).enter().append("div").attr("class", "bar").style("height", function(d){
-      var barHeight = d * 5;
-      return barHeight + "px";
-    });
+        $('.bar').click(function() {
+            alert("!!!");
+        });
 
         // Old tutorial code d3.select("#root").selectAll("p").data(dataset).enter().append("p").text(function(d) {return d; }).style("color", function(d) {
         // if (d > 15) {   //Threshold of 15

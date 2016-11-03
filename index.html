@@ -74,7 +74,6 @@
 
         .center {
             margin: auto;
-            border: 3px solid green;
             padding: 10px;
         }
 
@@ -92,7 +91,15 @@
 
         rect:hover{
           fill: #d21034;
+          cursor: pointer;
         }
+        text{
+          font-weight: bold;
+          fill: black;
+          cursor: pointer;
+          font-family: sans-serif;
+        }
+
 
     </style>
 </head>
@@ -103,31 +110,77 @@
 
         <div class="rubrickBars">
           <svg width="100%" height="100%">
-            <rect x="0" y="0" width="20%" height="33.33%" type="button" data-toggle="modal" data-target="#myModal"/>
-            <rect x="0" y="33%" width="20%" height="33.33%" type="button" data-toggle="modal" data-target="#myModal" fill="purple"/>
-            <rect x="0" y="66%" width="20%" height="33.33%" type="button" data-toggle="modal" data-target="#myModal" fill="orange"/>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="0" y="0" width="20%" height="33.33%" fill="#a9cef2"/>
+              <text x="3%" y="12.5%" font-size="16" fill="black" font-weight="bold">Ethical and
+              </text>
+              <text x="3%" y="17.5%" font-size="16" >Professional
+              </text>
+              <text x="3%" y="22.5%" font-size="16" >Behavior
+              </text>
+            </g>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="0" y="33%" width="20%" height="33.33%" fill="#7cb5ec"/>
+              <text x="3%" y="47.5%" font-size="16">Diversity and</text>
+              <text x="3%" y="52.5%" font-size="16">Difference</text>
+            </g>
 
-            <rect x="25%" y="0" width="20%" height="50%" fill="green" fill-opacity="0.5"/>
-            <rect x="25%" y="50%" width="20%" height="50%" fill="red" fill-opacity="0.5"/>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="0" y="66%" width="20%" height="33.33%" fill="#398fe2"/>
+              <text x="3%" y="74%" font-size="16">Human Rights</text>
+              <text x="3%" y="79%" font-size="16">and Social,</text>
+              <text x="3%" y="84%" font-size="16">Economic, and</text>
+              <text x="3%" y="89%" font-size="16">Environmental</text>
+              <text x="3%" y="94%" font-size="16">Justice</text>
+            </g>
 
-            <text x="30%" y="200" font-size="14" fill="white">Hi</text>
-            <rect x="50%" y="0" width="20%" height="25%" fill="brown" fill-opacity="0.5"/>
-            <rect x="50%" y="25%" width="20%" height="25%" fill="yellow" fill-opacity="0.5"/>
-            <rect x="50%" y="50%" width="20%" height="25%" fill="green" fill-opacity="0.5"/>
-            <rect x="50%" y="75%" width="20%" height="25%" fill="blue" fill-opacity="0.5"/>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="25%" y="0" width="20%" height="50%" fill="#F7DCB4"/>
+            </g>
 
-            <rect x="75%" y="0" width="20%" height="20%" fill="red" fill-opacity="0.5"/>
-            <rect x="75%" y="20%" width="20%" height="20%" fill="black" fill-opacity="0.5"/>
-            <rect x="75%" y="40%" width="20%" height="20%" fill="white" fill-opacity="0.5"/>
-            <rect x="75%" y="60%" width="20%" height="20%" fill="teal" fill-opacity="0.5"/>
-            <rect x="75%" y="80%" width="20%" height="20%" fill="gray" fill-opacity="0.5"/>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="25%" y="50%" width="20%" height="50%" fill="#398fe2"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="50%" y="0" width="20%" height="25%" fill="brown" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="50%" y="25%" width="20%" height="25%" fill="yellow" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="50%" y="50%" width="20%" height="25%" fill="green" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="50%" y="75%" width="20%" height="25%" fill="blue" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="75%" y="0" width="20%" height="20%" fill="red" fill-opacity="0.5"/>
+            </g>
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="75%" y="20%" width="20%" height="20%" fill="black" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="75%" y="40%" width="20%" height="20%"  fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="75%" y="60%" width="20%" height="20%" fill="teal" fill-opacity="0.5"/>
+            </g>
+
+            <g type="button" data-toggle="modal" data-target="#myModal">
+              <rect x="75%" y="80%" width="20%" height="20%" fill="gray" fill-opacity="0.5"/>
+            </g>
 
           </svg>
         </div>
 
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-          modal
-        </button>
+
 
     </div>
 
@@ -176,6 +229,10 @@
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Shows global interconnection among civil, political, social, cultural, economic, and environmental human rights.</span>
                     </label>
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
                   </div>
 
 

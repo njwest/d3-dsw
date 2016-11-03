@@ -96,11 +96,35 @@
           font-family: sans-serif;
         }
 
+      .navbar-header {
+        float: left;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .navbar-brand {
+        float:none;
+        color: #d21034 !important;
+        font-weight: bold;
+        font-size: 26px;
+      }
 
     </style>
 </head>
 
 <body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Assessing Social Work Competency Using the Case Study</a>
+      </div>
+
+    </div><!-- /.container-fluid -->
+  </nav>
+
 
     <div class="container">
 
@@ -115,6 +139,7 @@
               <text x="3%" y="22.5%" font-size="16" >Behavior
               </text>
             </g>
+
             <g type="button" data-toggle="modal" data-target="#Diversity">
               <rect x="0" y="33%" width="20%" height="33.33%" fill="#7cb5ec"/>
               <text x="3%" y="47.5%" font-size="16">Diversity and</text>
@@ -122,7 +147,7 @@
             </g>
 
             <g type="button" data-toggle="modal" data-target="#HumanRights">
-              <rect x="0" y="66%" width="20%" height="33.33%" fill="#398fe2"/>
+              <rect x="0" y="66%" width="20%" height="33.33%" fill="#4f9ce6"/>
               <text x="3%" y="74%" font-size="16">Human Rights</text>
               <text x="3%" y="79%" font-size="16">and Social,</text>
               <text x="3%" y="84%" font-size="16">Economic, and</text>
@@ -136,19 +161,18 @@
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Policy">
-              <rect x="25%" y="50%" width="20%" height="50%" fill="#398fe2"/>
+              <rect x="25%" y="50%" width="20%" height="50%" fill="#4f9ce6"/>
               <text x="28%" y="75%" font-size="16">Policy Practice</text>
-
             </g>
 
-            <g type="button" data-toggle="modal" data-target="#Engage">
-              <rect x="50%" y="0" width="20%" height="25%" fill="#7cb5ec" />
+            <g type="button" data-toggle="modal" data-target="#Engagement">
+              <rect x="50%" y="0" width="20%" height="25%" fill="#b0d2f3" />
               <text x="54%" y="13%" font-size="16">Engagement</text>
 
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Assess">
-              <rect x="50%" y="25%" width="20%" height="25%" fill="white" />
+              <rect x="50%" y="25%" width="20%" height="25%" fill="#96c3ef" />
               <text x="54%" y="39%" font-size="16">Assessment</text>
 
             </g>
@@ -160,34 +184,34 @@
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Evaluate">
-              <rect x="50%" y="75%" width="20%" height="25%" fill="white" />
+              <rect x="50%" y="75%" width="20%" height="25%" fill="#4f9ce6" />
               <text x="54%" y="88%" font-size="16">Evaluation</text>
 
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Individuals">
-              <rect x="75%" y="0" width="20%" height="20%" fill="#7cb5ec" />
+              <rect x="75%" y="0" width="20%" height="20%" fill="#b0d2f3" />
               <text x="80%" y="12%" font-size="16">Individuals</text>
 
             </g>
             <g type="button" data-toggle="modal" data-target="#Families">
-              <rect x="75%" y="20%" width="20%" height="20%" fill="white" />
+              <rect x="75%" y="20%" width="20%" height="20%" fill="#96c3ef" />
               <text x="80%" y="32%" font-size="16">Families</text>
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Groups">
-              <rect x="75%" y="40%" width="20%" height="20%" fill="#7cb5ec" />
+              <rect x="75%" y="40%" width="20%" height="20%" fill="#89bced" />
               <text x="81%" y="52%" font-size="16">Groups</text>
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Organizations">
-              <rect x="75%" y="60%" width="20%" height="20%" fill="white" />
+              <rect x="75%" y="60%" width="20%" height="20%" fill="#7cb5ec" />
               <text x="78%" y="71%" font-size="16">Organizations</text>
 
             </g>
 
             <g type="button" data-toggle="modal" data-target="#Communities">
-              <rect x="75%" y="80%" width="20%" height="20%" fill="#7cb5ec" />
+              <rect x="75%" y="80%" width="20%" height="20%" fill="#4f9ce6" />
             </g>
             <text x="79%" y="91%" font-size="16">Communities</text>
 
@@ -197,6 +221,325 @@
 
 
 
+    </div>
+
+    <div class="modal fade" id="Engagement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Engagement</h4>
+                </div>
+
+
+                <div class="modal-body">
+                  <div class="center">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform engagement.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Builds relationships and collaborates inter-professionally.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Use empathy, reflection, and interpersonal skills to effectively engage diverse clients and constituencies.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Strategically decides upon strategies to advance practice effectiveness.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Applies know-
+                      ledge of human behavior and the social environment, person-in-environ-ment, and interdisciplinary frameworks.</span>
+                    </label>
+
+
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Policy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Policy Practice</h4>
+                </div>
+
+
+                <div class="modal-body">
+                  <div class="center">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform policy practice.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Uses policy to mediate human rights and social justice issues.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Works peacefully at the local, state, and federal levels and manages the influence of personal biases and values.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Applies critical thinking to analyze, formulate, and advocate for policy.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Assess how social welfare and economic policies impact the delivery of and access to social services.</span>
+                    </label>
+
+
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Research" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Research</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="center">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice/method.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Uses practice experience and theory to inform scientific research</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Uses and translates research to inform and improve practice, policy, and service delivery</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Engages in critical analysis of qualitative and/or qualitative research</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Recognizes privilege and consequences of difference.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Demonstrates culturally informed, multi-disciplinary, and ethical approaches to building knowledge to practice.</span>
+                    </label>
+
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="Diversity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Diversity and Difference</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="center">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Engages clients and constituencies as experts of experience.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Applies self-awareness and self-regulation to manage the influence of personal biases and values in working with diverse populations.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Presents self as learner.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Recognizes privilege and consequences of difference.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Communicates and applies understanding of the importance of diversity and difference in shaping life experiences in all practice levels.</span>
+                    </label>
+
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ProfBehavior" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ethical and Professional Behavior</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="center">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Uses reflection and self-regulation to manage personal values.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Uses self-reflection and self-regulation to maintain professionalism in practice situations.</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Makes ethical decisions based on NASW Code of Ethics and/or additional codes of ethics as appropriate to context</span>
+                    </label>
+
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Demonstrates professional demeanor in behavior, especially oral, written, and electronic communication.</span>
+                    </label>
+
+                    <div>
+                    <label for="comment">How?</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="HumanRights" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

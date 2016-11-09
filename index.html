@@ -7,260 +7,27 @@
     <link rel="stylesheet" href="assets/css/toastr.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <style>
-        html {
-            font-family: sans-serif;
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-
-        body {
-            margin: 0;
-            /*background-color: #c0c0c0;*/
-
-        }
-
-        .container {
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                width: 750px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                width: 1170px;
-            }
-        }
-
-        .container-fluid {
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        div.bar {
-            display: inline-block;
-            width: 20px;
-            height: 75px;
-            /* We'll override this later */
-            background-color: teal;
-            margin-right: 2px;
-            margin-top: 10px;
-        }
-
-        svg .pumpkin {
-            fill: yellow;
-            stroke: orange;
-            stroke-width: 5;
-            opacity: 0.5;
-        }
-
-        .custom-control{
-          padding: 10px;
-          font-weight: normal;
-          width: 100%;
-          border: solid 1px
-        }
-
-        .center {
-            margin: auto;
-            padding: 10px;
-        }
-
-        .rubricBars{
-          height: 550px;
-          width: 800px;
-          margin: auto;
-          margin-top: 25px;
-
-        }
-
-        rect:hover{
-          fill: white;
-          cursor: pointer;
-        }
-        text{
-          font-weight: bold;
-          fill: black;
-          cursor: pointer;
-          font-family: sans-serif;
-        }
-      .navbar-default{
-        background-color: #745151;
-        border: none;
-        border-bottom: #c0c0c0;
-      }
-      .navbar-header {
-        float: left;
-        padding: 15px;
-        text-align: center;
-        width: 100%;
-      }
-
-      .navbar-brand {
-        float:none;
-        color: #fff !important;
-        font-weight: 400;
-        font-size: 26px;
-      }
-
-      .how{
-        font-size: 16px;
-      }
-
-      /* Background Gradient for Triadic Colors */
-
-
-      .gradient1
-      {
-          background-color: #C0C0C0;
-          /* For WebKit (Safari, Chrome, etc) */
-          background: #C0C0C0 -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C0C0C0)) no-repeat;
-          /* Mozilla,Firefox/Gecko */
-          background: #C0C0C0 -moz-linear-gradient(top, #FFFFFF, #C0C0C0) no-repeat;
-          /* IE 5.5 - 7 */
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#C0C0C0) no-repeat;
-          /* IE 8 */
-          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF)" no-repeat;
-      }
-
-
-      .modal-header{
-        background-color: #745151;
-        color: #fff;
-      }
-
-      .modal-content      {
-                background-color: #E6E6E6;
-                /* For WebKit (Safari, Chrome, etc) */
-                background: #E6E6E6 -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E6E6E6)) no-repeat;
-                /* Mozilla,Firefox/Gecko */
-                background: #E6E6E6 -moz-linear-gradient(top, #FFFFFF, #E6E6E6) no-repeat;
-                /* IE 5.5 - 7 */
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#E6E6E6) no-repeat;
-                /* IE 8 */
-                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#FFFFFF)" no-repeat;
-            }
-
-            .btn-primary{
-              background-color: #4f9ce6 !important;
-            }
-
-/*checkboxes  */
-
-.checkbox {
-  padding-left: 20px; }
-  .checkbox label {
-    display: inline-block;
-    position: relative;
-    padding-left: 5px; }
-    .checkbox label::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      width: 17px;
-      height: 17px;
-      left: 0;
-      margin-left: -20px;
-      border: 1px solid #cccccc;
-      border-radius: 3px;
-      background-color: #fff;
-      -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-      -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
-      transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
-    .checkbox label::after {
-      display: inline-block;
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      left: 0;
-      top: 0;
-      margin-left: -20px;
-      padding-left: 3px;
-      padding-top: 1px;
-      font-size: 11px;
-      color: #555555; }
-  .checkbox input[type="checkbox"] {
-    opacity: 0; }
-    .checkbox input[type="checkbox"]:focus + label::before {
-      outline: thin dotted;
-      outline: 5px auto -webkit-focus-ring-color;
-      outline-offset: -2px; }
-    .checkbox input[type="checkbox"]:checked + label::after {
-      font-family: 'FontAwesome';
-      content: "\f00c"; }
-    .checkbox input[type="checkbox"]:disabled + label {
-      opacity: 0.65; }
-      .checkbox input[type="checkbox"]:disabled + label::before {
-        background-color: #eeeeee;
-        cursor: not-allowed; }
-  .checkbox.checkbox-circle label::before {
-    border-radius: 50%; }
-  .checkbox.checkbox-inline {
-    margin-top: 0; }
-
-.checkbox-primary input[type="checkbox"]:checked + label::before {
-  background-color: #428bca;
-  border-color: #428bca; }
-.checkbox-primary input[type="checkbox"]:checked + label::after {
-  color: #fff; }
-
-.checkbox-success input[type="checkbox"]:checked + label::before {
-  background-color: #5cb85c;
-  border-color: #5cb85c; }
-.checkbox-success input[type="checkbox"]:checked + label::after {
-  color: #fff; }
-
-.check1{
-    margin-left:9%;
-  }
-.check2{
-  margin-left: 25%;
-}
-
-.check3{
-  margin-left: 24%;
-}
-
-.check4{
-  margin-left: 25%;
-}
-
-    </style>
+    <link rel="stylesheet" href="assets/css/master.css">
 </head>
 
 <body class="gradient1">
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <a class="navbar-brand" >Assessing Social Work Competency Using the Case Study</a>
-      </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand">Assessing Social Work Competency Using the Case Study</a>
+            </div>
 
-    </div><!-- /.container-fluid -->
-  </nav>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
 
     <div class="container">
 
         <div class="rubricBars">
-          <svg width="100%" height="100%">
+            <svg width="100%" height="100%">
             <g type="button" data-toggle="modal" data-target="#ProfBehavior">
               <rect x="0" y="0" width="20%" height="33.33%" fill="#a9cef2"/>
               <text x="3%" y="12.5%" font-size="16" >Ethical and
@@ -348,33 +115,33 @@
 
 
           </svg>
-          <div class="checkbox checkbox-success" style="display: block;">
-            <span class="check1">
+            <div class="checkbox checkbox-success" style="display: block;">
+                <span class="check1">
               <input id="checkbox3" type="checkbox" name="col1">
               <label for="checkbox3">
               </label>
             </span>
-            <span class="check2">
+                <span class="check2">
               <input id="checkbox4" type="checkbox" name="col2">
               <label for="checkbox4">
               </label>
             </span>
 
-            <span class="check3">
+                <span class="check3">
               <input id="checkbox5" type="checkbox" name="col3">
               <label for="checkbox5">
               </label>
             </span>
 
-            <span class="check4">
+                <span class="check4">
               <input id="checkbox6" type="checkbox" name="col4">
               <label for="checkbox6">
               </label>
             </span>
 
-          </div>
-          <div class="checkbox checkbox-success check2">
-          </div>
+            </div>
+            <div class="checkbox checkbox-success check2">
+            </div>
 
 
         </div>
@@ -394,12 +161,12 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <div>
-                    <label for="comment" class="how">How does this case study pertain to communities/a community?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="center">
+                        <div>
+                            <label for="comment" class="how">How does this case study pertain to communities/a community?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
                     </div>
-                  </div>
 
                 </div>
                 <div class="modal-footer">
@@ -419,12 +186,12 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <div>
-                    <label for="comment" class="how">How does this case study pertain to organizations?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="center">
+                        <div>
+                            <label for="comment" class="how">How does this case study pertain to organizations?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
                     </div>
-                  </div>
 
                 </div>
                 <div class="modal-footer">
@@ -444,12 +211,12 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <div>
-                    <label for="comment" class="how">How does this case study pertain to groups?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="center">
+                        <div>
+                            <label for="comment" class="how">How does this case study pertain to groups?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
                     </div>
-                  </div>
 
                 </div>
                 <div class="modal-footer">
@@ -469,12 +236,12 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <div>
-                    <label for="comment" class="how">How does this case study pertain to families?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="center">
+                        <div>
+                            <label for="comment" class="how">How does this case study pertain to families?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
                     </div>
-                  </div>
 
                 </div>
                 <div class="modal-footer">
@@ -495,12 +262,12 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <div>
-                    <label for="comment" class="how">How does this case study pertain to individuals?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="center">
+                        <div>
+                            <label for="comment" class="how">How does this case study pertain to individuals?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
                     </div>
-                  </div>
 
                 </div>
                 <div class="modal-footer">
@@ -522,60 +289,60 @@
 
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform evaluation.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses inter-professional collaboration to achieve best practice outcome.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Improves effectiveness on behalf of diverse groups.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Understands and balances qualitative and quantitative data.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Select and use appropriate methods for evaluation of outcomes.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Facilitates effective transitions and endings that advance mutually agreed upon goals.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies knowledge of human behavior and the social environment, person-in-envi-ronment, and interdisciplinary frameworks.</span>
                     </label>
 
-                    <div>
-                    <label for="comment" class="how" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -597,54 +364,54 @@
 
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform interventions.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge/data.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses inter-professional collaboration to achieve best practice outcome.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Understands how personal experiences and affective reactions might affect assessment and decision making.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Negotiates, mediates, and advocates with/ on behalf of diverse populations using self-reflection to maintain professionalism.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Chooses interventions that apply knowledge of HBSE, person-in-environment, and appropriate frameworks.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Facilitates effective transitions and endings that advance mutually agreed upon goals.</span>
                     </label>
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -666,49 +433,49 @@
 
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites/collects and closely reads appropriate literature/data to inform assessment.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses methods of assessment appropriately with diverse populations.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Understands how personal experiences and affective reactions might affect assessment and decision making.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Selects appropriate intervention strategies based on assessment, values of population, and research.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies knowledge of human behavior and the social environment, person-in-environ-ment, and interdisciplinary frameworks.</span>
                     </label>
 
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -729,38 +496,38 @@
 
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform engagement.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Builds relationships and collaborates inter-professionally.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Use empathy, reflection, and interpersonal skills to effectively engage diverse clients and constituencies.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Strategically decides upon strategies to advance practice effectiveness.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies know-
@@ -768,11 +535,11 @@
                     </label>
 
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -793,49 +560,49 @@
 
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform policy practice.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses policy to mediate human rights and social justice issues.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Works peacefully at the local, state, and federal levels and manages the influence of personal biases and values.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies critical thinking to analyze, formulate, and advocate for policy.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Assess how social welfare and economic policies impact the delivery of and access to social services.</span>
                     </label>
 
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -855,48 +622,48 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice/method.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses practice experience and theory to inform scientific research</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses and translates research to inform and improve practice, policy, and service delivery</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Engages in critical analysis of qualitative and/or qualitative research</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Recognizes privilege and consequences of difference.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Demonstrates culturally informed, multi-disciplinary, and ethical approaches to building knowledge to practice.</span>
                     </label>
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -916,48 +683,48 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Engages clients and constituencies as experts of experience.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies self-awareness and self-regulation to manage the influence of personal biases and values in working with diverse populations.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Presents self as learner.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Recognizes privilege and consequences of difference.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Communicates and applies understanding of the importance of diversity and difference in shaping life experiences in all practice levels.</span>
                     </label>
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -977,48 +744,48 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses reflection and self-regulation to manage personal values.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Uses self-reflection and self-regulation to maintain professionalism in practice situations.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Makes ethical decisions based on NASW Code of Ethics and/or additional codes of ethics as appropriate to context</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Demonstrates professional demeanor in behavior, especially oral, written, and electronic communication.</span>
                     </label>
 
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -1039,47 +806,47 @@
                 </div>
 
                 <div class="modal-body">
-                  <div class="center">
-                    <label class="custom-control custom-checkbox">
+                    <div class="center">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Cites and closely reads appropriate literature/theory to inform practice.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Contributes to practice community through the creation of new knowledge.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Engages in practices that advance social, economic, and environ justice.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Applies understanding that every person regardless of position in society has fundamental human rights.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Advocates strategically for human rights at the individual and system levels.</span>
                     </label>
 
-                    <label class="custom-control custom-checkbox">
+                        <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description">Shows global interconnection among civil, political, social, cultural, economic, and environmental human rights.</span>
                     </label>
-                    <div>
-                    <label for="comment" class="how">How?</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                  </div>
+                        <div>
+                            <label for="comment" class="how">How?</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -1098,27 +865,26 @@
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-$(document).ready(function(){
-    $('.col4').click(function() {
-        $('input[name=col4]').prop('checked', true);
-    });
+        $(document).ready(function() {
+            $('.col4').click(function() {
+                $('input[name=col4]').prop('checked', true);
+            });
 
-    $('.col3').click(function() {
-        $('input[name=col3]').prop('checked', true);
-    });
+            $('.col3').click(function() {
+                $('input[name=col3]').prop('checked', true);
+            });
 
-    $('.col2').click(function() {
-        $('input[name=col2]').prop('checked', true);
-    });
+            $('.col2').click(function() {
+                $('input[name=col2]').prop('checked', true);
+            });
 
-    $('.col1').click(function() {
-        $('input[name=col1]').prop('checked', true);
-    });
+            $('.col1').click(function() {
+                $('input[name=col1]').prop('checked', true);
+            });
 
-    var col1 = $('input[name=col1]');
+            var col1 = $('input[name=col1]');
 
-  });
-
+        });
     </script>
 </body>
 
